@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var conditionImageView: UIImageView!
     @IBOutlet var tempretureLable: UILabel!
     @IBOutlet var conditionLable: UILabel!
+    @IBOutlet weak var textUserName: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
