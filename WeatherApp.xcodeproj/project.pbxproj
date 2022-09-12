@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF47E07728CCE58E004D96BC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF47E07628CCE58E004D96BC /* Alamofire */; };
+		FF47E07A28CCE5DE004D96BC /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = FF47E07928CCE5DE004D96BC /* SkeletonView */; };
+		FFCCF12128CF80B000CCF48E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCCF12028CF80B000CCF48E /* WeatherData.swift */; };
+		FFCCF12428CF81FE00CCF48E /* Menager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCCF12328CF81FE00CCF48E /* Menager.swift */; };
+		FFCCF12628CFB83F00CCF48E /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCCF12528CFB83F00CCF48E /* SecondView.swift */; };
 		FFEF44BD28BFCEE6009F6922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF44BC28BFCEE6009F6922 /* AppDelegate.swift */; };
 		FFEF44BF28BFCEE6009F6922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF44BE28BFCEE6009F6922 /* SceneDelegate.swift */; };
 		FFEF44C128BFCEE6009F6922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF44C028BFCEE6009F6922 /* ViewController.swift */; };
@@ -16,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FFCCF12028CF80B000CCF48E /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		FFCCF12328CF81FE00CCF48E /* Menager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menager.swift; sourceTree = "<group>"; };
+		FFCCF12528CFB83F00CCF48E /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		FFEF44B928BFCEE6009F6922 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEF44BC28BFCEE6009F6922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEF44BE28BFCEE6009F6922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +39,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF47E07A28CCE5DE004D96BC /* SkeletonView in Frameworks */,
+				FF47E07728CCE58E004D96BC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFCCF11F28CF808C00CCF48E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFCCF12028CF80B000CCF48E /* WeatherData.swift */,
+				FFCCF12228CF81E600CCF48E /* Meneger */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFCCF12228CF81E600CCF48E /* Meneger */ = {
+			isa = PBXGroup;
+			children = (
+				FFCCF12328CF81FE00CCF48E /* Menager.swift */,
+			);
+			path = Meneger;
+			sourceTree = "<group>";
+		};
 		FFEF44B028BFCEE6009F6922 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +83,11 @@
 		FFEF44BB28BFCEE6009F6922 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FFCCF11F28CF808C00CCF48E /* Model */,
 				FFEF44BC28BFCEE6009F6922 /* AppDelegate.swift */,
 				FFEF44BE28BFCEE6009F6922 /* SceneDelegate.swift */,
 				FFEF44C028BFCEE6009F6922 /* ViewController.swift */,
+				FFCCF12528CFB83F00CCF48E /* SecondView.swift */,
 				FFEF44C228BFCEE6009F6922 /* Main.storyboard */,
 				FFEF44C528BFCEE9009F6922 /* Assets.xcassets */,
 				FFEF44C728BFCEE9009F6922 /* LaunchScreen.storyboard */,
@@ -83,6 +112,10 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				FF47E07628CCE58E004D96BC /* Alamofire */,
+				FF47E07928CCE5DE004D96BC /* SkeletonView */,
+			);
 			productName = WeatherApp;
 			productReference = FFEF44B928BFCEE6009F6922 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,10 @@
 				Base,
 			);
 			mainGroup = FFEF44B028BFCEE6009F6922;
+			packageReferences = (
+				FF47E07528CCE58E004D96BC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FF47E07828CCE5DE004D96BC /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = FFEF44BA28BFCEE6009F6922 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCCF12628CFB83F00CCF48E /* SecondView.swift in Sources */,
+				FFCCF12428CF81FE00CCF48E /* Menager.swift in Sources */,
 				FFEF44C128BFCEE6009F6922 /* ViewController.swift in Sources */,
 				FFEF44BD28BFCEE6009F6922 /* AppDelegate.swift in Sources */,
+				FFCCF12128CF80B000CCF48E /* WeatherData.swift in Sources */,
 				FFEF44BF28BFCEE6009F6922 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,6 +398,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF47E07528CCE58E004D96BC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FF47E07828CCE5DE004D96BC /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF47E07628CCE58E004D96BC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF47E07528CCE58E004D96BC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FF47E07928CCE5DE004D96BC /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF47E07828CCE5DE004D96BC /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FFEF44B128BFCEE6009F6922 /* Project object */;
 }
