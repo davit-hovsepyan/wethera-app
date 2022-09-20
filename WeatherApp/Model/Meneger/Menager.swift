@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct WeaherManager{
+struct WeatherManager{
     
     private let API_KEY = "3e11c7f1c0eaf6e42b36b30a366deee9"
     
